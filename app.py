@@ -60,5 +60,9 @@ def page10():
 def page11():
     return render_template("page11.html")
 
+@app.route("/myaccount")
+def myaccount():
+    return render_template("myaccount.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
