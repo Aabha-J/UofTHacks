@@ -1,8 +1,177 @@
 {% extends "base.html" %}
-
-{% block title %}Page 1{% endblock %}
-
+    <head>
+        <title>{% block title %}Bills{% endblock %}</title>
+    </head>
 {% block content %}
-<h1>Page 1</h1>
-<p>This is Page 1.</p>
+<style>
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Add spacing between elements inside the .content div */
+    .content {
+        display: flex; /* Allows flexbox layout */
+        flex-direction: column; /* Align items vertically */
+        gap: 15px; /* Add spacing between items */
+        max-width: 300px; /* Optional: Set a maximum width */
+        margin: 0 auto; /* Center the form horizontally (optional) */
+    }
+
+    /* Ensure all labels and inputs are aligned */
+    .content label {
+        font-weight: bold; /* Makes labels stand out */
+        margin-bottom: 5px;
+    }
+
+    .content select,
+    .content input {
+        padding: 10px; /* Adds spacing inside inputs/selects */
+        border: 1px solid #ccc; /* Add a light border */
+        border-radius: 5px; /* Optional: Rounded corners */
+        width: 100%; /* Makes inputs and selects full-width */
+    }
+
+     /* Pay button styling */
+     .pay {
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .pay button {
+        padding: 12px 24px;
+        background-color: #4CAF50; /* Green background */
+        color: white;
+        border: none;
+        border-radius: 8px; /* Rounded corners */
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .pay button:hover {
+        background-color: #45a049; /* Slightly darker green on hover */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    }
+
+    .pay button:focus {
+        outline: none; /* Remove the default focus outline */
+    }
+
+    /* Popup (hidden by default) */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        width: 300px;
+        height: 200px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+        z-index: 2;
+        color: #333;
+    }
+
+    .popup h2 {
+        margin: 0 0 15px;
+        color: #e74c3c;
+        font-size: 24px;
+    }
+
+    .popup p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .popup .btn {
+        padding: 10px 20px;
+        background-color: #4CAF50; /* Green background */
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    .popup .btn:hover {
+        background-color: #45a049; /* Slightly darker green */
+    }
+
+    /* Overlay behind the popup */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: none;
+        z-index: 1;
+    }
+</style>
+<script>
+    function openPay() {
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+    }
+
+    function closePay() {
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
+    }
+</script>
+
+<head>
+    <title>Bills</title>
+</head>
+<div class="header">
+    <h1>Pay Bills</h1>
+</div>
+<div class="content">
+    <label for="bill">Select Bill</label>
+    <select name="bill" id="bill">
+        <option value="electricity">Electricity</option>
+        <option value="water">Water</option>
+        <option value="internet">Internet</option>
+        <option value="phone">Phone</option>
+    </select>
+    <br>
+    <label for="select account">Select Account</label>
+    <select name="select account" id="select account">
+        <option value="chequing">Chequing</option>
+        <option value="savings">Savings</option>
+        <option value="credit card">Credit Card</option>
+    </select>
+    <br>
+    <label for="payee">Select Payee</label>
+    <select name="payee" id="payee">
+        <option value="hydro">Hydro</option>
+        <option value="rogers">Rogers</option>
+        <option value="bell">Bell</option>
+        <option value="toronto hydro">Toronto Hydro</option>
+    </select>
+    <br>
+    <label for="amount">Amount</label>
+    <input type="number" name="amount" id="amount">
+    <label for="currency">CAD</label>
+    <br>
+    
+</div>
+<div class="pay">
+    <!-- Button to trigger the popup -->
+    <button onclick="openPay()">Pay</button>
+</div>
+
+<!-- Popup HTML -->
+<div id="overlay" class="overlay" onclick="closePay()"></div>
+<div id="popup" class="popup">
+    <h2>Oooooooops!</h2>
+    <p>Insufficient Funds! 😟</p>
+    <a href="{{ url_for('page10') }}" class="btn">Check Your Account!</a>
+</div>
 {% endblock %}

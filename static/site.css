@@ -98,3 +98,18 @@ body {
 .btn:hover {
     background-color: #16324a;
 }
+
+.done-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #0033a0; /* RBC Blue */
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+}

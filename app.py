@@ -63,6 +63,28 @@ def page11():
 @app.route("/myaccount")
 def myaccount():
     return render_template("myaccount.html")
+#Dummy inbox and message data
+inbox = [
+    {"id": 1, "sender": "alice@example.com", "subject": "Meeting Update", "preview": "The meeting is rescheduled to..."},
+    {"id": 2, "sender": "bob@example.com", "subject": "Project Deadline", "preview": "Don't forget the deadline is..."},
+]
+
+messages = {
+    1: {"sender": "alice@example.com", "subject": "Meeting Update", "body": "The meeting is rescheduled to tomorrow at 3 PM."},
+    2: {"sender": "bob@example.com", "subject": "Project Deadline", "body": "Don't forget the deadline is next Friday at 5 PM."},
+}
+
+@app.route("/inbox")
+def inbox_page():
+    return render_template("inbox.html", inbox=inbox)
+
+@app.route("/email/<int:email_id>")
+def email_page(email_id):
+    message = messages.get(email_id)
+    if message:
+        return render_template("email.html", message=message)
+    return "Email not found", 404
+
 
 if __name__ == "__main__":
     app.run(debug=True)
