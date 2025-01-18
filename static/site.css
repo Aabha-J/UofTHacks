@@ -1,0 +1,59 @@
+body {
+    background-color: #121212;
+    font-family: 'Arial', sans-serif;
+    color: #e0e0e0;
+}
+
+.navbar {
+    background-color: #0033a0; /* RBC Blue */
+    font-size: 1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    padding: 15px 10px; /* Increased padding */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+    margin-right: 10px;
+    padding: 5px 10px; /* Added padding for links */
+}
+
+.navbar a:hover {
+    background-color: #002080; /* Darker RBC Blue on hover */
+    color: #ffcc00; /* RBC Yellow on hover */
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.intro-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.intro-container h1 {
+    color: #ffcc00; /* RBC Yellow */
+    font-size: 2.5em;
+}
+
+.intro-container p {
+    font-size: 1.2em;
+    margin: 20px 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #0033a0; /* RBC Blue */
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #002080; /* Darker RBC Blue */
+}
