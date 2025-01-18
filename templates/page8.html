@@ -1,8 +1,104 @@
 {% extends "base.html" %}
 
-{% block title %}Page 1{% endblock %}
+{% block title %}Shopping Catalog{% endblock %}
+
+
 
 {% block content %}
-<h1>Page 1</h1>
-<p>This is Page 1.</p>
+<style>
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding-top: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+        gap: 16px;
+    }
+
+    .product img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .product button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.product button:hover {
+    background-color:white;
+    color: #4CAF50;
+}
+
+
+</style>
+<h1 style="text-align: center;">Let's Do Some Shopping</h1>
+<div  class="product-grid">
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/another-image.jpg') }}" alt="Product 1">
+        <h2>Blue Top</h2>
+        <p>Price: $10.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/mar.jpg') }}" alt="Product 2">
+        <h2>UofT Hacks Top</h2>
+        <p>Price: $80.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/fashion.jpg') }}" alt="Product 3">
+        <h2>Pink Fusha Dress</h2>
+        <p>Price: $70.00</p>
+        <button >Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/fa6.jpg') }}" alt="Product 1">
+        <h2>Red Top</h2>
+        <p>Price: $20.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/fa5.jpg') }}" alt="Product 2">
+        <h2>Button Down</h2>
+        <p>Price: $40.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/fa3.jpg') }}" alt="Product 3">
+        <h2>Grey Hoodie</h2>
+        <p>Price: $70.00</p>
+        <button >Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/fa2.jpg') }}" alt="Product 1">
+        <h2>Hat</h2>
+        <p>Price: $20.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/fa1.jpg') }}" alt="Product 2">
+        <h2>Sunglasses</h2>
+        <p>Price: $18.00</p>
+        <button>Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/fa4.jpg') }}" alt="Product 3">
+        <h2>Jean Jacket</h2>
+        <p>Price: $70.00</p>
+        <button >Add to Cart</button>
+    </div>
+    <div class="product">
+        <img src="{{ url_for('static', filename='images/f22.jpg') }}" alt="Product 3">
+        <h2>Long Sleeve Top</h2>
+        <p>Price: $19.00</p>
+        <button >Add to Cart</button>
+    </div>
+</div>
+<a href="{{ url_for('page9') }}" class="done-button">I'm Done</a>
 {% endblock %}
