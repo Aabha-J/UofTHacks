@@ -34,6 +34,21 @@
     background-color:white;
     color: #4CAF50;
 }
+
+.done-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #0033a0; /* RBC Blue */
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+}
 </style>
 <h1 style="text-align: center;">Let's Do Some Shopping</h1>
 <div  class="product-grid">
@@ -44,9 +59,9 @@
         <button>Add to Cart</button>
     </div>
     <div class="product">
-        <img src="{{ url_for('static', filename='images/another-image.jpg') }}" alt="Product 2">
+        <img src="{{ url_for('static', filename='images/mar.jpg') }}" alt="Product 2">
         <h2>Product 2</h2>
-        <p>Price: $20.00</p>
+        <p>Price: $80.00</p>
         <button>Add to Cart</button>
     </div>
     <div class="product">
@@ -56,4 +71,5 @@
         <button >Add to Cart</button>
     </div>
 </div>
+<a href="{{ url_for('page9') }}" class="done-button">I'm Done</a>
 {% endblock %}
