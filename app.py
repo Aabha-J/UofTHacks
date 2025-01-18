@@ -60,6 +60,9 @@ def page10():
 def page11():
     return render_template("page11.html")
 
+@app.route("/myaccount")
+def myaccount():
+    return render_template("myaccount.html")
 #Dummy inbox and message data
 inbox = [
     {"id": 1, "sender": "alice@example.com", "subject": "Meeting Update", "preview": "The meeting is rescheduled to..."},
