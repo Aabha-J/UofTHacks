@@ -21,7 +21,7 @@ def page2():
     global email_content
     if request.method == "POST":
         email_content = request.form["email_content"]
-        return "Email content saved!"
+        return render_template("page3.html")
     return render_template("page2.html")
 
 @app.route("/page3")

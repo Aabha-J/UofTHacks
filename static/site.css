@@ -77,12 +77,12 @@ body {
     color: white;
     background-color: #0033a0; /* RBC Blue */
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-top: 20px;
 }
 
 .email-container .btn:hover {
-    background-color: #002080; /* Darker RBC Blue */
+    background-color: #18307a; /* Darker RBC Blue */
 }
 
 .btn {
