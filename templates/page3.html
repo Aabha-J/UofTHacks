@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}Page 3{% endblock %}
+{% block title %}Great Job{% endblock %}
 
 {% block content %}
-<h1>Page 3</h1>
-<p>This is Page 3.</p>
+<div class="intro-container">
+    <h1>Great Job!</h1>
+        <p style="padding: -10px 125px 15px 125px;"></p>
+            You emailed your first candidate. Now, let's view all of this form
+            the perspective of the candidate.
+        </p>
+
+    <a href="{{ url_for('page6') }}" class="btn">Let's Go!</a>
+</div>
 {% endblock %}
