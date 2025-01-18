@@ -1,8 +1,15 @@
 {% extends "base.html" %}
 
-{% block title %}Page 2{% endblock %}
+{% block title %}Invite a Prospective Student{% endblock %}
 
 {% block content %}
-<h1>Page 2</h1>
-<p>This is Page 2.</p>
+<div class="email-container">
+    <h1>Invite a Prospective Student</h1>
+    <p>Write an email inviting a prospective student to do a coding test. We'll attach the link to the exercise for you.</p>
+    <form method="post">
+        <textarea name="email_content" rows="10" cols="50" placeholder="Write your email here..."></textarea>
+        <br>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+</div>
 {% endblock %}

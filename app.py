@@ -1,6 +1,8 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
+
+email_content = ""
 
 @app.route("/")
 def home():
@@ -14,8 +16,12 @@ def about():
 def page1():
     return render_template("page1.html")
 
-@app.route("/page2")
+@app.route("/page2", methods=["GET", "POST"])
 def page2():
+    global email_content
+    if request.method == "POST":
+        email_content = request.form["email_content"]
+        return render_template("page3.html")
     return render_template("page2.html")
 
 @app.route("/page3")

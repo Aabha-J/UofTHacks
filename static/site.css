@@ -41,7 +41,48 @@ body {
 
 .intro-container p {
     font-size: 1.2em;
-    margin: 20px 10px;
+    margin: 20px 0;
+}
+
+.email-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.email-container h1 {
+    color: #ffcc00; /* RBC Yellow */
+    font-size: 2em;
+}
+
+.email-container p {
+    font-size: 1.2em;
+    margin: 20px 0;
+}
+
+.email-container textarea {
+    width: 80%;
+    height: 200px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.email-container .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #0033a0; /* RBC Blue */
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.email-container .btn:hover {
+    background-color: #18307a; /* Darker RBC Blue */
 }
 
 .btn {
@@ -49,11 +90,11 @@ body {
     padding: 10px 20px;
     font-size: 1em;
     color: white;
-    background-color: #0033a0; /* RBC Blue */
+    background-color: #1e3a5f;
     text-decoration: none;
     border-radius: 5px;
 }
 
 .btn:hover {
-    background-color: #002080; /* Darker RBC Blue */
+    background-color: #16324a;
 }
