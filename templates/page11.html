@@ -1,27 +1,40 @@
 {% extends "base.html" %}
 
-{% block title %}Page 1{% endblock %}
+{% block title %}Perspective{% endblock %}
 
 {% block content %}
-<h1>Page 1</h1>
-<p>This is Page 1.</p>
-{% endblock %}
+<div class="intro-container">
+    <h1>Let's Put It Into Perspective</h1>
+    <p style="padding: 50px;">First you were the hacker (without knowing it) sending an email with a malicious link.
+        Then you saw the perspective of the victim who naively clicked on the link and lost all their money.
+        Phishing scams account for nearly 22 percent of all data breaches and it can happen to anyone.
+        Believing it will never happen to you, prevents you from being cautious online.
 
-<a href="https://www.example.com" class="button">You, apply now to ‘Click here to download security'
-</a>
+        So to help you click on this link to download the latest antivirus software to protect your computer.
+        <div style="text-align: center; margin-top: 20px;">
+            <button class="download">Download Antivrius</button>
+        </div>
+    </p>
+
+</div>
 
 <style>
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: white;
-    background-color: blue;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-}
-.button:hover {
-    background-color: darkblue;
-}
-</style>
+    .download {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: white;
+        background-color: rgb(52, 52, 168);
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .download:hover {
+        background-color: darkblue;
+    }
+    </style>
+
+{% endblock %}
+
+
+
