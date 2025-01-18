@@ -3,6 +3,97 @@
 {% block title %}Page 1{% endblock %}
 
 {% block content %}
-<h1>Page 1</h1>
-<p>This is Page 1.</p>
+<style>
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Add spacing between elements inside the .content div */
+    .content {
+        display: flex; /* Allows flexbox layout */
+        flex-direction: column; /* Align items vertically */
+        gap: 15px; /* Add spacing between items */
+        max-width: 300px; /* Optional: Set a maximum width */
+        margin: 0 auto; /* Center the form horizontally (optional) */
+    }
+
+    /* Ensure all labels and inputs are aligned */
+    .content label {
+        font-weight: bold; /* Makes labels stand out */
+        margin-bottom: 5px;
+    }
+
+    .content select,
+    .content input {
+        padding: 10px; /* Adds spacing inside inputs/selects */
+        border: 1px solid #ccc; /* Add a light border */
+        border-radius: 5px; /* Optional: Rounded corners */
+        width: 100%; /* Makes inputs and selects full-width */
+    }
+
+    .pay {
+        text-align: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .pay button {
+        padding: 12px 24px;
+        background-color: #4CAF50; /* Green background */
+        color: white;
+        border: none;
+        border-radius: 8px; /* Rounded corners */
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease; /* Smooth transition for hover effect */
+    }
+
+    .pay button:hover {
+        background-color: #45a049; /* Slightly darker green on hover */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    }
+
+    .pay button:focus {
+        outline: none; /* Remove the default focus outline */
+    }
+</style>
+
+</style>
+<div class="header">
+    <h1>Pay Bills</h1>
+</div>
+<div class="content">
+    <label for="bill">Select Bill</label>
+    <select name="bill" id="bill">
+        <option value="electricity">Electricity</option>
+        <option value="water">Water</option>
+        <option value="internet">Internet</option>
+        <option value="phone">Phone</option>
+    </select>
+    <br>
+    <label for="select account">Select Account</label>
+    <select name="select account" id="select account">
+        <option value="chequing">Chequing</option>
+        <option value="savings">Savings</option>
+        <option value="credit card">Credit Card</option>
+    </select>
+    <br>
+    <label for="payee">Select Payee</label>
+    <select name="payee" id="payee">
+        <option value="hydro">Hydro</option>
+        <option value="rogers">Rogers</option>
+        <option value="bell">Bell</option>
+        <option value="toronto hydro">Toronto Hydro</option>
+    </select>
+    <br>
+    <label for="amount">Amount</label>
+    <input type="number" name="amount" id="amount">
+    <label for="currency">CAD</label>
+    <br>
+    
+</div>
+<div class="pay"> 
+    <button>Pay</button>
+</div>
 {% endblock %}
