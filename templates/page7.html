@@ -6,7 +6,7 @@
 
 <head>
 <style>
-    body { background-color: #FFFFFF; }
+    body { background-color: #005DAA; }
 
     input[type="text"] { 
         color: black; 
@@ -28,7 +28,9 @@
     input[type="submit"]:hover { background-color:darkblue;
     }
 
-    .rectangle { width: 100%; /* Width of the rectangle */ height: 100px; /* Height of the rectangle */ background-color: #005DAA; /* Color of the rectangle */ }
+    .rectangle { width: 100%; /* Width of the rectangle */ 
+        height: 100px; /* Height of the rectangle */ 
+        background-color: #FFFFFF; /* Color of the rectangle */ }
 
     .button_small {
         display: inline-block;
@@ -46,7 +48,8 @@
         background-color: darkblue;
     }
 
-    .log-out-button { background-color: #FFD200; 
+    .log-out-button { 
+        background-color: #FFD200; 
         color: white; 
         padding: 10px 32px; 
         text-align: center; 
@@ -92,27 +95,9 @@
         <h1 style="display: inline;">Royal Bank</h1>
         <div class = rectangle></div>
         <br>
-        <div class="banner-container"> <img src="static/bank_banner.png" alt="Banner Image" class="banner"> </div>
         <a href="{{ url_for('myaccount') }}" class="btn">My Accounts</a>
 
-        <h2>Bank Accounts</h2>
-        <hr class="short-hr">
-        <h3 style="display: inline;"> Chequing </h3> 
-        <p style="text-align: right; margin-right: 500px;">$2442.21</p>
-        <br>
-        <h3 style="display: inline;"> Savings </h3> 
-        <p style="text-align: right; margin-right: 500px;">$223.10</p>
-
-        <br>
-
-        <h2>Credit Cards</h2>
-        <hr class="short-hr">
-        <h3  style="display: inline;"> RBC Cash Back Mastercard </h3> 
-        <p style="text-align: right; margin-right: 500px;">$345.44</p>
-        <br>
-        <h3  style="display: inline; "> RBC ION+ Visa</h3> 
-        <p style="text-align: right; margin-right: 500px;">$297.95</p>
-
+        <img src = "static/rbc_offer.png"  alt="Image" class="banner"> 
 
         <form action="https://www.rbcroyalbank.com/personal.html" method="post"> <label for="text-box">Enter your text:</label>
             <br> 
