@@ -1,5 +1,16 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+
+{% block title %}Welcome{% endblock %}
 
 {% block content %}
-    <h1>{% block title %} Welcome to your Flask app! {% endblock %}</h1>
+<div class="intro-container">
+    <h1>Welcome, Recruiter!</h1>
+        <p style="padding: 10px;"></p>
+            We're excited to have you here. Let's get started on your journey.
+            Today you will be testing a new set of candidates, welcoming 
+            them as they make their first steps in the recruitment process.
+        </p>
+
+    <a href="{{ url_for('page2') }}" class="btn">Get Started</a>
+</div>
 {% endblock %}

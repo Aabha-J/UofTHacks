@@ -2,8 +2,8 @@ body{margin-top:20px;}
 .email-app {
     display: flex;
     flex-direction: row;
-    background: #000000;
-    border: 1px solid #000000;
+    background: #0e0f0f;
+    
 }
 
 .email-app nav {
