@@ -36,9 +36,9 @@ def page4():
 def page5():
     return render_template("page5.html")
 
-@app.route("/page6")
+@app.route("/page6",methods=["GET"])
 def page6():
-    return render_template("page6.html")
+    return render_template("page6.html",email_content=email_content)
 
 @app.route("/page7")
 def page7():
