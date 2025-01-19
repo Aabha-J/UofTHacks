@@ -2,14 +2,14 @@ body{margin-top:20px;}
 .email-app {
     display: flex;
     flex-direction: row;
-    background: #fff;
-    border: 1px solid #e1e6ef;
+    background: #000000;
+    border: 1px solid #000000;
 }
 
 .email-app nav {
     flex: 0 0 200px;
     padding: 1rem;
-    border-right: 1px solid #e1e6ef;
+    border-right: 1px solid #000000;
 }
 
 .email-app nav .btn-block {
@@ -27,8 +27,8 @@ body{margin-top:20px;}
 .email-app nav .nav .nav-item .nav-link,
 .email-app nav .nav .nav-item .navbar .dropdown-toggle,
 .navbar .email-app nav .nav .nav-item .dropdown-toggle {
-    color: #151b1e;
-    border-bottom: 1px solid #e1e6ef;
+    color: #ffffff;
+    border-bottom: 1px solid #000000;
 }
 
 .email-app nav .nav .nav-item .nav-link i,
@@ -63,13 +63,13 @@ body{margin-top:20px;}
     padding: 0;
     list-style: none;
 }
-
+/*
 .email-app .inbox .message {
     position: relative;
     padding: 1rem 1rem 1rem 2rem;
     cursor: pointer;
     border-bottom: 1px solid #e1e6ef;
-}
+}*/
 /*
 .email-app .inbox .message:hover {
     background: #000000;
@@ -85,12 +85,12 @@ body{margin-top:20px;}
 .email-app .inbox .message .actions .action {
     width: 2rem;
     margin-bottom: 0.5rem;
-    color: #000000;
+    color: #ffffff;
     text-align: center;
 }
 
 .email-app .inbox .message a {
-    color: #000;
+    color: #ffffff;
 }
 
 .email-app .inbox .message a:hover {
@@ -120,6 +120,7 @@ body{margin-top:20px;}
 }
 
 .email-app .inbox .message .description {
+    color: #ffffff;
     font-size: 12px;
 }
 /*
@@ -129,6 +130,7 @@ body{margin-top:20px;}
 }*/
 
 .email-app .message .details .title {
+    color: #ffffff;
     padding: 1rem 0;
     font-weight: bold;
 }
@@ -137,8 +139,8 @@ body{margin-top:20px;}
     display: flex;
     padding: 1rem 0;
     margin: 1rem 0;
-    border-top: 1px solid #000000;
-    border-bottom: 1px solid #000000;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
 }
 
 .email-app .message .details .header .avatar {
@@ -149,7 +151,7 @@ body{margin-top:20px;}
 
 .email-app .message .details .header .from {
     font-size: 12px;
-    color: #000000;
+    color: #ffffff;
     align-self: center;
 }
 
@@ -159,6 +161,12 @@ body{margin-top:20px;}
 }
 
 .email-app .message .details .header .date {
+    color: #ffffff;
+    margin-left: auto;
+}
+
+.email-app .message .details .content {
+    color: #ffffff;
     margin-left: auto;
 }
 /*

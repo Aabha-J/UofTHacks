@@ -1,5 +1,5 @@
 body {
-    background-color: #121212;
+    background-color: #000000;
     font-family: 'Arial', sans-serif;
     color: #e0e0e0;
 }
@@ -107,6 +107,21 @@ body {
     font-size: 1em;
     color: white;
     background-color: #0033a0; /* RBC Blue */
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: center;
+    text-align: center;
+}
+
+.invitation {
+    position: fixed;
+    bottom: 300px; /* Increase from 20px to 40px to move the button up */
+    right: 650px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #019323; /* RBC Blue */
     text-decoration: none;
     border-radius: 5px;
     cursor: pointer;
